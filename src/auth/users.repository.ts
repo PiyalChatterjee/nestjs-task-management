@@ -2,6 +2,7 @@ import {
   ConflictException,
   Injectable,
   InternalServerErrorException,
+  Logger,
 } from '@nestjs/common';
 import { DataSource, Repository } from 'typeorm';
 import { User } from './user.entity';
@@ -10,12 +11,14 @@ import * as bcrypt from 'bcrypt';
 
 @Injectable()
 export class UsersRepository extends Repository<User> {
+  private logger = new Logger('UsersRepository');
   constructor(private dataSource: DataSource) {
     super(User, dataSource.createEntityManager());
   }
 
   async createUser(authCredentialsDto: AuthCredentialsDto): Promise<void> {
     const { username, password } = authCredentialsDto;
+    this.logger.debug(`Creating a new user with username: ${username}`);
 
     //salt
     const salt = await bcrypt.genSalt();

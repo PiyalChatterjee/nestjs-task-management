@@ -63,8 +63,8 @@ $ npm run test:cov
 To configure your NestJS application, follow these steps:
 
 1. **Environment Variables**:
-   Create a `.env` file in the root of your project and add the necessary environment variables. For example:
-   ```.env
+   Create a `.env.stage` file in the root of your project and add the necessary environment variables. For example:
+   ```.env.stage
    DATABASE_HOST=localhost
    DATABASE_PORT=5432
    DATABASE_USER=your_username

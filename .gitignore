@@ -61,6 +61,6 @@ yarn.lock
 
 #Nest env files
 .env.stage
-.env.stage.development
+.env.stage.dev
 .env.stage.production
 .env.stage.test

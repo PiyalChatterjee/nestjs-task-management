@@ -59,8 +59,8 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 package-lock.json
 yarn.lock
 
-#Env files
-.env
-.env.development
-.env.test
-.env.production
+#Nest env files
+.env.stage
+.env.stage.development
+.env.stage.production
+.env.stage.test

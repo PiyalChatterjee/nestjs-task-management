@@ -58,6 +58,21 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## Configuration
+
+To configure your NestJS application, follow these steps:
+
+1. **Environment Variables**:
+   Create a `.env` file in the root of your project and add the necessary environment variables. For example:
+   ```.env
+   DATABASE_HOST=localhost
+   DATABASE_PORT=5432
+   DATABASE_USER=your_username
+   DATABASE_PASSWORD=your_password
+   DATABASE_NAME=your_database
+   JWT_SECRET=your_jwt_secret
+   ```
+
 ## Deployment
 
 When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
